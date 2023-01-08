@@ -11,6 +11,11 @@
 		7FE619A3296A97BE0065A127 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE619A2296A97BE0065A127 /* ContentView.swift */; };
 		7FE619A5296A97C10065A127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FE619A4296A97C10065A127 /* Assets.xcassets */; };
 		7FE619A9296A97C10065A127 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FE619A8296A97C10065A127 /* Preview Assets.xcassets */; };
+		7FE619B0296A98060065A127 /* CentralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE619AF296A98060065A127 /* CentralViewModel.swift */; };
+		7FE619B2296A98130065A127 /* CentralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE619B1296A98130065A127 /* CentralView.swift */; };
+		7FE619B4296A98210065A127 /* PeripheralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE619B3296A98210065A127 /* PeripheralView.swift */; };
+		7FE619B6296A98300065A127 /* PeripheralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE619B5296A98300065A127 /* PeripheralViewModel.swift */; };
+		7FE619BA296A989B0065A127 /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE619B9296A989B0065A127 /* TransferService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		7FE619A4296A97C10065A127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FE619A6296A97C10065A127 /* CorebluetoothBLESwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CorebluetoothBLESwiftUI.entitlements; sourceTree = "<group>"; };
 		7FE619A8296A97C10065A127 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7FE619AF296A98060065A127 /* CentralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralViewModel.swift; sourceTree = "<group>"; };
+		7FE619B1296A98130065A127 /* CentralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralView.swift; sourceTree = "<group>"; };
+		7FE619B3296A98210065A127 /* PeripheralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralView.swift; sourceTree = "<group>"; };
+		7FE619B5296A98300065A127 /* PeripheralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralViewModel.swift; sourceTree = "<group>"; };
+		7FE619B9296A989B0065A127 /* TransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,9 @@
 			children = (
 				7FE619A0296A97BE0065A127 /* CorebluetoothBLESwiftUIApp.swift */,
 				7FE619A2296A97BE0065A127 /* ContentView.swift */,
+				7FE619B9296A989B0065A127 /* TransferService.swift */,
+				7FE619B8296A985E0065A127 /* Peripheral */,
+				7FE619B7296A983A0065A127 /* Central */,
 				7FE619A4296A97C10065A127 /* Assets.xcassets */,
 				7FE619A6296A97C10065A127 /* CorebluetoothBLESwiftUI.entitlements */,
 				7FE619A7296A97C10065A127 /* Preview Content */,
@@ -67,6 +80,24 @@
 				7FE619A8296A97C10065A127 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7FE619B7296A983A0065A127 /* Central */ = {
+			isa = PBXGroup;
+			children = (
+				7FE619B1296A98130065A127 /* CentralView.swift */,
+				7FE619AF296A98060065A127 /* CentralViewModel.swift */,
+			);
+			path = Central;
+			sourceTree = "<group>";
+		};
+		7FE619B8296A985E0065A127 /* Peripheral */ = {
+			isa = PBXGroup;
+			children = (
+				7FE619B3296A98210065A127 /* PeripheralView.swift */,
+				7FE619B5296A98300065A127 /* PeripheralViewModel.swift */,
+			);
+			path = Peripheral;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE619B2296A98130065A127 /* CentralView.swift in Sources */,
 				7FE619A3296A97BE0065A127 /* ContentView.swift in Sources */,
+				7FE619B6296A98300065A127 /* PeripheralViewModel.swift in Sources */,
+				7FE619B0296A98060065A127 /* CentralViewModel.swift in Sources */,
+				7FE619B4296A98210065A127 /* PeripheralView.swift in Sources */,
 				7FE619A1296A97BE0065A127 /* CorebluetoothBLESwiftUIApp.swift in Sources */,
+				7FE619BA296A989B0065A127 /* TransferService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +305,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "他のデバイスとメッセージをするためにBluetoothを使用します。";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +344,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "他のデバイスとメッセージをするためにBluetoothを使用します。";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
